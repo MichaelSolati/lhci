@@ -1,0 +1,15 @@
+{
+  "hosting": {
+    "predeploy": "npm run build:ssr && npm --prefix functions run build",
+    "public": "dist/pwa-otta-dev/browser",
+    "ignore": [
+      "index.html"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "ssr"
+      }
+    ]
+  }
+}
